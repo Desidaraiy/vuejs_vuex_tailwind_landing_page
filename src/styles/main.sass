@@ -1,0 +1,23 @@
+.cool-link::after 
+    content: ''
+    display: block
+    width: 0
+    height: 2px
+    background-color: white
+    transition: width .3s
+
+.cool-link:hover::after 
+    width: 100%
+
+.info__section_bg
+    background-image: url('../assets/bg-info_1.jpg')
+
+.heading__two:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 100%
+    width: 80px
+    height: 2px
+    transform: translateX(-50%)
+    background: rgb(99, 102, 241)
