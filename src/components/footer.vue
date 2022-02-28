@@ -12,7 +12,7 @@
 
     <div class="flex xs:flex-col flex-row justify-center md:hidden mt-5 md:text-base text-xs">
       <p class="text-white font-bold divide-x divide-gray-700 ">
-        <span>Pushmobile 2015 - &infin;&nbsp;&nbsp;</span>
+        <span>Pushmobile 2015 - 2022&nbsp;&nbsp;</span>
         <a href="">&nbsp;&nbsp;Политика конфидециальности</a>
       </p> 
     </div>

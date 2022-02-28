@@ -5,9 +5,9 @@
 
         <h2 class="text-white font-bold text-3xl  inline-block relative  my-5 pb-5 mb-5 heading__two ">Выбирайте удобный для себя путь взаимодействия с нами</h2>
 
-        <div class="flex flex-col md:flex-row justify-around w-full mt-10 mb-5">
+        <div class="flex flex-col md:flex-row justify-center w-full mt-10 mb-5">
 
-            <div class="block w-full md:w-1/2 lg:w-1/3 py-5 px-5 mb-10 mr-10 bg-gradient-to-r from-green-500 to-indigo-800 rounded-xl text-left">
+            <div class="block w-full md:w-1/2 lg:w-1/3 py-5 px-5 mb-10 mx-auto md:mx-5 bg-gradient-to-r from-green-500 to-indigo-800 rounded-xl text-left">
               <div class="flex flex-row">
                 <div class="w-4/5">
                   <h3 class="text-white text-2xl mb-4">1. Сопровождение</h3>
@@ -19,7 +19,7 @@
                 </div>
               </div>
             </div>
-            <div class="block w-full md:w-1/2 lg:w-1/3 py-5 px-5 mb-10 mr-10 bg-gradient-to-r from-green-500 to-indigo-800 rounded-xl text-left">
+            <div class="block w-full md:w-1/2 lg:w-1/3 py-5 px-5 mb-10 mx-auto md:mx-5 bg-gradient-to-r from-green-500 to-indigo-800 rounded-xl text-left">
               <div class="flex flex-row">
                 <div class="w-4/5">
                   <h3 class="text-white text-2xl mb-4">2. Разработка</h3>

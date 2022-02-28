@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <header class="px-2 sm:px-4 py-4 bg-gradient-to-r from-green-500 to-indigo-800 sticky top-0 z-50">
+  <div id="app" class="bg-gray-800">
+    <header class="px-2 sm:px-4 transition-all duration-500 sticky top-0 z-50" :class="activeClassList == 1 ? classListOne : classListTwo">
       <div class="container flex flex-wrap justify-around items-center mx-auto ">
         <a href="#" id="logotype">
           <img src="./assets/logo_light.png" class="h-8 pl-2" alt="pushmobile - разработка лучших айти решений!">
@@ -30,19 +30,19 @@
           <ul 
             class="flex flex-col md:flex-row uppercase md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-              <a href="#hero" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out shadow-md hover:shadow-xl" aria-current="page">наверх</a>
+              <a href="#hero" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out" aria-current="page">наверх</a>
             </li>
             <li>
-              <a href="#team_info" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out shadow-md hover:shadow-xl" >Возможности</a>
+              <a href="#team_info" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out" >Возможности</a>
             </li>
             <li>
-              <a href="#use_our_team" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out shadow-md hover:shadow-xl" >Разработка</a>
+              <a href="#use_our_team" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out" >Разработка</a>
             </li>
             <li>
-              <a href="#our_services" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out shadow-md hover:shadow-xl" >О нас</a>
+              <a href="#our_services" v-smooth-scroll class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out" >О нас</a>
             </li>
             <li>
-              <a href="#" class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out shadow-md hover:shadow-xl" >Контакты</a>
+              <a href="#" class="block cool-link py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 transition duration-500 ease-in-out " >Контакты</a>
             </li>
           </ul>
         </div>
@@ -57,22 +57,26 @@
 export default{
   components: {},
   data(){
+    let classListOne = "bg-transparent py-8";
+    let classListTwo = "bg-gradient-to-r from-green-500 to-indigo-800 py-4";
+    let activeClassList = 1;
     return{
-      menuOpened: false
+      menuOpened: false,
+      classListOne,
+      classListTwo,
+      activeClassList
     }
   },
   mounted(){
-    this.init();
+    window.addEventListener('scroll', this.onScroll);
   },
   methods: {
-    init(){
-      // window.addEventListener('scroll', function(){
-      //   if(document.scrollTop > 100){
-      //     console.log('ok');
-      //   }else{
-      //     console.log('ok 2');
-      //   }
-      // });
+    onScroll(){
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        this.activeClassList = 2;
+      } else {
+        this.activeClassList = 1;
+      }
     }
   }
 
